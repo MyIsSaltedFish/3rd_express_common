@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+  	<groupId>com.qf</groupId>
+	<artifactId>3rd_express_parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>3rd_express_common</artifactId>
+  <dependencies>
+  	<dependency>
+	    <groupId>com.belerweb</groupId>
+	    <artifactId>pinyin4j</artifactId>
+	    <version>${pinyin4j.version}</version>
+	</dependency>
+	<dependency>
+    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>${poi.version}</version>
+	</dependency>
+	<dependency>				
+	    <groupId>com.janeluo</groupId>			
+	    <artifactId>ikanalyzer</artifactId>			
+	    <version>2012_u6</version>			
+	</dependency>			
+  </dependencies>
+  <build>
+  		<finalName>${project.artifactId}</finalName>
+		<plugins>
+			<!-- java编译插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.build.sourceEncoding.version}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+  </build>
+</project>
